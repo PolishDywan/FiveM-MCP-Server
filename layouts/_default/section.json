@@ -1,0 +1,1 @@
+{{ dict "content" (.RenderShortcodes | htmlUnescape) "params" .Params | jsonify }}

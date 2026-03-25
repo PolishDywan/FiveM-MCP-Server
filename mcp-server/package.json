@@ -1,0 +1,21 @@
+{
+  "name": "fivem-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP Server for searching and reading FiveM documentation",
+  "type": "module",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js"
+  },
+  "keywords": ["fivem", "mcp", "documentation"],
+  "author": "FiveM Community",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}

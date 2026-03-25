@@ -1,0 +1,31 @@
+{{- $name := .Get 0 -}}
+{{- $natives := (resources.GetRemote "https://static.cfx.re/natives/natives.json") | transform.Unmarshal -}}
+{{- $cfxNatives := (resources.GetRemote "https://static.cfx.re/natives/natives_cfx.json") | transform.Unmarshal -}}
+{{- $nativeHash := 0 -}}
+{{- range $natives -}}
+    {{- range . -}}
+        {{- if (eq .name $name) -}}
+            {{- $nativeHash = .hash -}}
+        {{- end -}}
+
+        {{- if (in .aliases $name) -}}
+            {{- $nativeHash = .hash -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+
+{{- if eq $nativeHash 0 -}}
+    {{- range $cfxNatives -}}
+        {{- range . -}}
+            {{- if (eq .name $name) -}}
+                {{ $nativeHash = .hash -}}
+            {{- end -}}
+
+            {{- if (in .aliases $name) -}}
+                {{- $nativeHash = .hash -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+
+{{- (print "[" $name "](https://docs.fivem.net/natives/?_" $nativeHash ")") -}}
