@@ -6,17 +6,17 @@ Welcome to the FiveM Documentation! This is the official source. You can explore
 
 ### FiveM MCP Server 🤖
 
-Ten projekt zawiera serwer [Model Context Protocol (MCP)](https://modelcontextprotocol.io/), który pozwala AI przeszukiwać i czytać lokalną dokumentację FiveM.
+This project includes a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server that allows AI to search and read local FiveM documentation.
 
-#### Instalacja
+#### Installation
 ```bash
 cd mcp-server
 npm install
 npm run build
 ```
 
-#### Konfiguracja Claude Desktop
-Dodaj poniższy fragment do konfiguracji (np. `%APPDATA%/Claude/claude_desktop_config.json`):
+#### Claude Desktop Configuration
+Add the following configuration to your Claude Desktop config file (typically at `%APPDATA%/Claude/claude_desktop_config.json`):
 ```json
 {
   "mcpServers": {
@@ -28,14 +28,11 @@ Dodaj poniższy fragment do konfiguracji (np. `%APPDATA%/Claude/claude_desktop_c
 }
 ```
 
-## Rozwój 🚀
+## Contributing 🚀
 
-Jeśli znajdziesz błędy w dokumentacji lub działaniu serwera, zgłoś je bezpośrednio w tym repozytorium.
+If you find any errors in the documentation or issues with the server, please report them directly in this repository.
 
-### Chcesz pomóc? 🤝
-Doceniamy każdą pomoc! Zapoznaj się z [wytycznymi dotyczącymi wkładu](content/docs/contributing/contribution-guidelines/).
-
-
+### Want to Help? 🤝
 We love contributions! If you're interested in helping out, check out our [Contribution Guidelines](content/docs/contributing/contribution-guidelines/) to get started.
 
 [docs]: https://docs.fivem.net
